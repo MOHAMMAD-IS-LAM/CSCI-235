@@ -15,7 +15,7 @@ Creature::Creature() {
    category_ = UNKNOWN;
 }
 
-Creature::Creature(std::string name, Category c_category, int hitpoints, int level, bool tame) {
+Creature::Creature(const std::string& name, Category c_category, int hitpoints, int level, bool tame) {
    for (int c = 0; c < name.length(); c++) {
             if (!isalpha(name[c])) {
                name_ = "NAMELESS";
@@ -129,9 +129,9 @@ bool Creature::isTame() const{
 }
 
 void Creature::display() const{
-   std::cout << getName() << std::endl;
-   std::cout << "Category: " << getCategory() << std::endl;
-   std::cout << "Level: " << getLevel() << std::endl;
-   std::cout << "Hitpoints: " << getHitpoints() << std::endl;
-   std::cout << "Tame: " << (isTame() ? "TRUE" : "FALSE") << std::endl;
+   std::cout << "NAME: " << getName() << std::endl;
+   std::cout << "CATEGORY: " << getCategory() << std::endl;
+   std::cout << "LVL: " << getLevel() << std::endl;
+   std::cout << "HP: " << getHitpoints() << std::endl;
+   std::cout << "TAME: " << (isTame() ? "TRUE" : "FALSE") << std::endl;
 }

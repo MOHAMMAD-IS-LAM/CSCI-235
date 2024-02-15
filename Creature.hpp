@@ -18,7 +18,7 @@ class Creature {
 
         Creature();
 
-        Creature(std::string name, Category c_category = UNKNOWN, int hitpoints = 1, int level = 1, bool tame = false);
+        Creature(const std::string& name, Category c_category = UNKNOWN, int hitpoints = 1, int level = 1, bool tame = false);
 
         bool setName(const std::string& name);
 
